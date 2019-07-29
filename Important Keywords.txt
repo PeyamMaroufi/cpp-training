@@ -1,11 +1,11 @@
 -----------------------------------------------------------------
-FOR GETTING VALUES FROM A FILE
+* FOR GETTING VALUES FROM A FILE
 
-getline(Nameof file, name of the string defined in the local) % For getting the input from a text file
-cout << line << endl; % to get the value of above method
+	getline(Nameof file, name of the string defined in the local) % For getting the input from a text file
+	cout << line << endl; % to get the value of above method
 
 -----------------------------------------------------------------
-FOR GEETING VALUES FROM A VECTOR
+* FOR GEETING VALUES FROM A VECTOR
 
     for (vector<string>::iterator it = strings.begin(); it != strings.end(); it++)
     {
@@ -13,7 +13,7 @@ FOR GEETING VALUES FROM A VECTOR
     }
 
 -----------------------------------------------------------------
-FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP
+* FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP
 
     /* Detta hittar element som är lika med 20 */
     pair<multimap<int, string>::iterator, multimap<int, string>::iterator> its = lookup.equal_range(20);
@@ -24,7 +24,7 @@ FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP
     }
 
 -----------------------------------------------------------------
-FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP in C++11
+* FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP in C++11
 
     /* Följande är använd i c++11 som gör det enklare med c++11. Ovan code är c++98 */
     auto its_new = lookup.equal_range(20);
@@ -35,7 +35,19 @@ FOR GETTING VALUE THAT ARE EWUAL TO A CERTAIN VALUE IN A MULTIMAP in C++11
     }
 
 -----------------------------------------------------------------
-TO SORT VALUES IN A VECTOR PLEASE LOOK AT FILE SortingVectors.cpp
-in StandardLibrarry folder
+* TO SORT VALUES IN A VECTOR PLEASE LOOK AT FILE 
+
+	SortingVectors.cpp in StandardLibrarry folder
+
+-----------------------------------------------------------------
+* OPERTOR= IS USED TO MAKE USE OF THE REFERENCE ADRESS OF AN ABJECT.
+
+	Look at Overloading_the_assignment_operator.cpp
+
+-----------------------------------------------------------------
+* RULE OF THREE
+
+	If you define a copy contructor or a assigment operator or a destructor
+	then you have to define the other two. 
 
 -----------------------------------------------------------------
