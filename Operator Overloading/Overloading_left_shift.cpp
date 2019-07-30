@@ -34,6 +34,7 @@ public:
     friend ostream &operator<<(ostream &out, const Test &test)
     {
         out << test.id << ": " << test.name;
+        return out;
     }
 };
 
