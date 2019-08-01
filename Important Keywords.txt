@@ -51,3 +51,11 @@
 	then you have to define the other two. 
 
 -----------------------------------------------------------------
+* SEPARATE HEADER AND CLASS
+
+	You can have a function outside the class declaration inside the header file and still 
+	access it. but this tim eyou can use it without having ClassName:: . You can just write
+	the name of the function as you have in the header file. And to access values in the 
+	class you can have getValue functions.
+
+-----------------------------------------------------------------
