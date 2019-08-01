@@ -37,4 +37,18 @@ ostream &operator<<(ostream &out, const Complex &c);
  * don't want to change those argument values.
  */
 Complex operator+(const Complex &c1, const Complex &c2);
+
+/* If you want to add a real number without any imaginary part then
+ * you can redeclare the function according to following. We don't
+ * use a reference because it is just about a few bytes.
+ */
+Complex operator+(const Complex &c1, double d);
+
+/* In above function you see that the first argument is Complex object
+ * while the second one is double. But what if user want the first one
+ * double and second one Complex class? Then we have to redeclare the
+ * function
+ */
+Complex operator+(double d, const Complex &c1);
+
 #endif /* COMPLEX_H_ */

@@ -22,6 +22,14 @@ int main() {
 	Complex c3 = c1 + c2;
 	cout << c3 << endl;
 	cout << c1 + c2 + c3 << endl;
+
+	/* Adding a real number to a imaginary number*/
+	Complex c4(4,2);
+	Complex c5 = c4 +7;
+	cout << c5 << endl;
+
+	/* A double on the write side */
+	cout << 3.2 + c5 << endl;
 	return 0;
 
 }
