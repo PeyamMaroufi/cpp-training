@@ -11,22 +11,29 @@
 #include <iostream>
 using namespace std;
 
-class Complex {
+class Complex
+{
 private:
 	double real;
 	double imaginary;
+
 public:
 	Complex();
 	Complex(double real, double imaginary);
 	Complex(const Complex &other);
 	const Complex &operator=(const Complex &other);
-	double getReal() const {
+	double getReal() const
+	{
 		return real;
 	}
-	double getImaginary() const {
+	double getImaginary() const
+	{
 		return imaginary;
 	}
-
+	/* Deference operator. This is just an example that shows you can
+	deference everything. In this example we are going to calculate the
+	conjugat of a complex number. */
+	Complex operator*() const;
 };
 
 /* free function member */

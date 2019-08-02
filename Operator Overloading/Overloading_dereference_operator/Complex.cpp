@@ -6,40 +6,53 @@
  */
 
 #include "Complex.h"
-ostream &operator<<(ostream &out, const Complex &c) {
+ostream &operator<<(ostream &out, const Complex &c)
+{
 	out << "(" << c.getReal() << ", " << c.getImaginary() << ")";
 	return out;
 }
 
-Complex operator+(const Complex &c1, const Complex &c2) {
+Complex operator+(const Complex &c1, const Complex &c2)
+{
 	return Complex(c1.getReal() + c2.getReal(),
-			c1.getImaginary() + c2.getImaginary());
+				   c1.getImaginary() + c2.getImaginary());
 }
-Complex operator+(const Complex &c1, double d) {
+Complex operator+(const Complex &c1, double d)
+{
 	return Complex(c1.getReal() + d, c1.getImaginary());
 }
 
-Complex operator+(double d, const Complex &c1) {
+Complex operator+(double d, const Complex &c1)
+{
 	return Complex(c1.getReal() + d, c1.getImaginary());
 }
 
-Complex::Complex() {
+Complex::Complex()
+{
 	real = 0;
 	imaginary = 0;
 }
 
-Complex::Complex(double real, double imaginary) :
-		real(real), imaginary(imaginary) {
+Complex::Complex(double real, double imaginary) : real(real), imaginary(imaginary)
+{
 	cout << "Constructor with two arguments" << endl;
 }
 
-Complex::Complex(const Complex &other) {
+Complex::Complex(const Complex &other)
+{
 	real = other.real;
 	imaginary = other.imaginary;
 	cout << "Constructor with Complex instance reference" << endl;
 }
 
-const Complex &Complex::operator =(const Complex &other) {
+/* This function is a member function of that class. How you should write is like this: TheReturnType Class::TheFunction() */
+Complex Complex::operator*() const
+{
+	return Complex(real, -imaginary);
+}
+
+const Complex &Complex::operator=(const Complex &other)
+{
 	cout << "Constructor with Complex equal operator reference" << endl;
 	real = other.real;
 	imaginary = other.imaginary;
