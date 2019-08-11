@@ -35,7 +35,7 @@
     }
 
 -----------------------------------------------------------------
-* TO SORT VALUES IN A VECTOR PLEASE LOOK AT FILE 
+* TO SORT VALUES IN A VECTOR PLEASE LOOK AT FILE
 
 	SortingVectors.cpp in StandardLibrarry folder
 
@@ -48,14 +48,21 @@
 * RULE OF THREE
 
 	If you define a copy contructor or a assigment operator or a destructor
-	then you have to define the other two. 
+	then you have to define the other two.
 
 -----------------------------------------------------------------
 * SEPARATE HEADER AND CLASS
 
-	You can have a function outside the class declaration inside the header file and still 
+	You can have a function outside the class declaration inside the header file and still
 	access it. but this tim eyou can use it without having ClassName:: . You can just write
-	the name of the function as you have in the header file. And to access values in the 
+	the name of the function as you have in the header file. And to access values in the
 	class you can have getValue functions.
+
+-----------------------------------------------------------------
+* FUNCTION POINTERS
+
+    void (*test)(int, string) = myVoid;
+    myVoid(8, "Hi, How are you?");
+    For More info look at cpp-training/Passing Functions to Functions/Function Pointers/
 
 -----------------------------------------------------------------
